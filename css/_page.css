@@ -1,4 +1,25 @@
 /* CTA section */
 
 .cta {
+    position: relative;
+    isolation: isolate;
+    text-align: center;
+}
+
+@mdia (min-width: 50em) {
+    .cta {
+        text-align: left;
+    }
+}
+
+.cta::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: url("../images/bg-tablet-pattern.svg"),
+        url("../images/bg-tablet-pattern.svg");
+    background-position: -15rem -5rem, 80rem -42rem;
+    background-repeat: no-repeat;
+    opacity: 0.1;
 }
